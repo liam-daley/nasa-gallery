@@ -1,22 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+body,
+html {
+	font-family: "Roboto", sans-serif;
+}
+
 .App {
-  text-align: center;
+	text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+	animation: App-logo-spin infinite 20s linear;
+	height: 80px;
+}
+.build-instructions {
+	background-color: silver;
+	/* color: white; */
+	padding: 20px;
+	text-align: center;
+	font-family: "Courier New", Courier, monospace;
+	border-radius: 5px;
+	border-width: 1px;
+	border-style: dashed;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	background-color: #222;
+	height: 150px;
+	padding: 20px;
+	color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.App-title {
+	font-size: 1.5em;
+}
+
+.App-intro {
+	font-size: large;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.content {
+	max-width: 48rem;
+	margin: 50px auto;
+	padding: 20px;
+	text-align: left;
+}
+
+.content ul li {
+	margin: 5px;
+}
+
+.astronomy-container {
+	padding: 10px;
+}
+
+.loading-container {
+	min-height: 100px;
+	min-width: 100px;
+	position: relative;
+}
+
+.loader {
+	position: absolute;
+	top: 50%;
+	margin-top: -35px;
+	left: 50%;
+	margin-left: -35px;
+	width: 70px;
+	height: 70px;
+}
+
+.moon-loader {
+	margin-top: -17px;
+	margin-left: -17px;
+	width: 34px;
+	height: 34px;
+}
+
+.loader-circle {
+	box-sizing: border-box;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 1px solid rgba(2, 2, 2, 0.21);
+	animation: rotate 2.1s infinite;
+	animation-timing-function: linear;
+}
+.loader-circle > div {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	margin-left: 5px;
+	border-radius: 50%;
+	background-color: #1a1a1a;
+}
+.loader-circle > div.loader-moon-size {
+	width: 5px;
+	height: 5px;
+	margin-left: 2.5px;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+.loader-sun {
+	position: absolute;
+	left: 50%;
+	margin-left: -9.5px;
+	top: 50%;
+	margin-top: -9.5px;
+	width: 21px;
+	height: 21px;
+	background-color: #1a1a1a;
+	border-radius: 50%;
 }
