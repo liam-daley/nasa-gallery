@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import apiKey from '../shared/apiKey';
 
 const FeaturePhoto = () => {
     return (
@@ -63,7 +64,7 @@ class FeaturePhoto extends Component {
 	}
 
 	componentDidMount() {
-		const API_KEY = "nxKl8yTvpvsXEqRz06mTPnn29uyckFmFCYrnqEIz"
+		const API_KEY = apiKey
 		const END_POINT = "https://api.nasa.gov/planetary/apod?api_key="
 
 		axios
