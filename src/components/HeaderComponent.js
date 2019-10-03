@@ -8,7 +8,7 @@ class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isNavOpen: false,
+            isNavOpen: false
         };
         this.toggleNav = this.toggleNav.bind(this);
     }
@@ -26,39 +26,38 @@ class Header extends Component {
     
     render() {
         return (
-            <Navbar dark bg-danger expand="md">
-                <div className="container">
-                    <NavbarToggler onClick={this.toggleNav} />
-                    <NavbarBrand className="ml-auto" href="/">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="NASA" />
-                        <h1>NASA Image Gallery</h1>
-                    </NavbarBrand>
-                    <Collapse isOpen={this.state.isNavOpen} navbar>
-                        <Nav navbar>
-                            <NavItem>
-                                <NavLink className="nav-link" to="/home">Home</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link" to="/gallery">Gallery</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link" to="/photo-of-the-day">Photo of the Day</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <Form class="form-inline" onSubmit={this.handleSearch}>
+            <React.Fragment>
+                <Navbar dark expand="md">
+                    <div className="container">
+                        <NavbarToggler onClick={this.toggleNav} />
+                        <NavbarBrand className="ml-auto" href="/">
+                            <img src="assets/images/logo.svg" alt="NASA" height="40"/>
+                        </NavbarBrand>
+                        <Collapse isOpen={this.state.isNavOpen} navbar>
+                            <Nav navbar>
+                                <NavItem>
+                                    <NavLink className="nav-link" to="/home">Home</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink className="nav-link" to="/gallery">Gallery</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink className="nav-link" to="/feature-photo">Feature Photo</NavLink>
+                                </NavItem>
+                                <Form className="form-inline" onSubmit={this.handleSearch}>
                                     <FormGroup className="form-group">
-                                        <Input type="text" id="searchQuery" name="searchQuery"
+                                        <Input type="search" id="searchQuery" name="searchQuery"
                                             innerRef={(input) => this.searchQuery = input} />
                                     </FormGroup>
                                     <Button outline type="submit" value="submit" color="white">
                                         <span className="fa fa-search fa-lg"></span>
                                     </Button>
                                 </Form>
-                            </NavItem>
-                        </Nav>
-                    </Collapse>
-                </div>
-            </Navbar>
+                            </Nav>
+                        </Collapse>
+                    </div>
+                </Navbar>
+            </React.Fragment>
         );
     }
 }

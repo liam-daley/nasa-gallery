@@ -5,64 +5,6 @@ html {
 	font-family: "Roboto", sans-serif;
 }
 
-.App {
-	text-align: center;
-}
-
-.App-logo {
-	animation: App-logo-spin infinite 20s linear;
-	height: 80px;
-}
-.build-instructions {
-	background-color: silver;
-	/* color: white; */
-	padding: 20px;
-	text-align: center;
-	font-family: "Courier New", Courier, monospace;
-	border-radius: 5px;
-	border-width: 1px;
-	border-style: dashed;
-}
-
-.App-header {
-	background-color: #222;
-	height: 150px;
-	padding: 20px;
-	color: white;
-}
-
-.App-title {
-	font-size: 1.5em;
-}
-
-.App-intro {
-	font-size: large;
-}
-
-@keyframes App-logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
-
-.content {
-	max-width: 48rem;
-	margin: 50px auto;
-	padding: 20px;
-	text-align: left;
-}
-
-.content ul li {
-	margin: 5px;
-}
-
-.astronomy-container {
-	padding: 10px;
-}
-
 .loading-container {
 	min-height: 100px;
 	min-width: 100px;
@@ -128,4 +70,26 @@ html {
 	height: 21px;
 	background-color: #1a1a1a;
 	border-radius: 50%;
+}
+
+.row-header{
+    margin:0px auto;
+    padding:0px auto;
+}
+
+.row-content {
+    margin:0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 1px ridge;
+    min-height:400px;
+}
+
+.navbar {
+	background-color: #e60d2e;
+	color: white;
+	font-weight: bold;
+}
+
+.nav-link {
+	font-size: 110%;
 }

@@ -17,7 +17,6 @@ const Media = (props) => {
 
 // todo implement a detail component containing all other information from the media object
 const Detail = (props) => {
-    const media = props.media;
     return (
         <div></div>
     );

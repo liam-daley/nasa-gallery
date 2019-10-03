@@ -2,7 +2,6 @@ import React from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import Loading from './LoadingComponent';
-import baseUrl from '../shared/baseUrl';
 
 function RenderMedia ({media}) {
     return (
@@ -35,7 +34,7 @@ const Gallery = (props) => {
             </div>
         );
     } else {
-        const gallery = props.mediaList.mediaList.map((media) => {
+        const gallery = props.mediaList.mediaList.collection.items.map((media) => {
             return (
                 <div key={media.data[0].nasa_id} className="col-12 col-md-3 m-1">
                     <RenderMedia media={media} />

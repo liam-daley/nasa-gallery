@@ -1,11 +1,10 @@
-import React, { Component } from "react"
-import apiKey from '../shared/apiKey';
+import React from "react"
 
 const FeaturePhoto = () => {
     return (
         <div className="container">
             <div className="row">
-                <h3>Photo of the Day is Coming Soon!</h3>
+                <h3>New features coming soon!</h3>
             </div>
         </div>
     );
@@ -17,6 +16,7 @@ import { ADD_MEDIA } from "../redux/ActionTypes";
 import axios from "axios"
 import { withRouter } from "react-router-dom"
 import Loading from "./LoadingComponent"
+import apiKey from '../shared/apiKey';
 
 const AstronomyCard = props => {
 	const { title, url, hdurl, explanation, date, copyright, media_type } = props.data
