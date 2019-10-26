@@ -30,29 +30,27 @@ class Header extends Component {
                 <Navbar dark expand="md">
                     <div className="container">
                         <NavbarToggler onClick={this.toggleNav} />
-                        <NavbarBrand className="ml-auto" href="/">
+                        <NavbarBrand href="/">
                             <img src="assets/images/logo.svg" alt="NASA" height="40"/>
                         </NavbarBrand>
+                        <Form className="form-inline" onSubmit={this.handleSearch}>
+                            <Input type="search" id="searchQuery" name="searchQuery"
+                                innerRef={(input) => this.searchQuery = input} />
+                            <Button outline type="submit" value="submit" color="white">
+                                <span className="fa fa-search fa-lg"></span>
+                            </Button>
+                        </Form>
                         <Collapse isOpen={this.state.isNavOpen} navbar>
-                            <Nav navbar>
+                            <Nav className="ml-auto" navbar>
                                 <NavItem>
                                     <NavLink className="nav-link" to="/home">Home</NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/gallery">Gallery</NavLink>
+                                    <NavLink className="nav-link" to="/library">Library</NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/feature-photo">Feature Photo</NavLink>
+                                    <NavLink className="nav-link" to="/photo-of-the-day">Photo of the Day</NavLink>
                                 </NavItem>
-                                <Form className="form-inline" onSubmit={this.handleSearch}>
-                                    <FormGroup className="form-group">
-                                        <Input type="search" id="searchQuery" name="searchQuery"
-                                            innerRef={(input) => this.searchQuery = input} />
-                                    </FormGroup>
-                                    <Button outline type="submit" value="submit" color="white">
-                                        <span className="fa fa-search fa-lg"></span>
-                                    </Button>
-                                </Form>
                             </Nav>
                         </Collapse>
                     </div>

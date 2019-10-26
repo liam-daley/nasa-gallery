@@ -1,11 +1,11 @@
 import * as ActionTypes from './ActionTypes';
-import { baseUrl, search, photoOfTheDay, apiKey, imageUrl } from '../shared/apiDefinitions';
+import { baseUrl, search, photoOfTheDay, apiKey, imageUrl, detaultQuery } from '../shared/apiDefinitions';
 
 export const fetchMediaList = () => (dispatch) => {
     
     dispatch(mediaListLoading(true));
 
-    return fetch(imageUrl + search + 'apollo%2011&description=moon%20landing&media_type=image')
+    return fetch(imageUrl + search + detaultQuery + '&media_type=image')
         .then(response => {
             if (response.ok) {
                 return response;

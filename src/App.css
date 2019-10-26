@@ -79,17 +79,14 @@ html {
 
 .row-content {
     margin:0px auto;
-    padding: 50px 0px 50px 0px;
+    padding: 10px 0px 10px 0px;
     border-bottom: 1px ridge;
-    min-height:400px;
+	min-height:400px;
 }
 
 .navbar {
 	background-color: #e60d2e;
 	color: white;
 	font-weight: bold;
-}
-
-.nav-link {
 	font-size: 110%;
 }
