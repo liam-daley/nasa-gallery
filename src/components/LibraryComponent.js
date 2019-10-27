@@ -2,6 +2,8 @@ import React from 'react';
 import { Card, CardImg, CardBody, CardTitle, Jumbotron, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import Loading from './LoadingComponent';
+import SearchHeader from './SearchHeaderComponent';
+import SearchTabs from './SearchTabsComponent'
 import { detaultQuery } from '../shared/apiDefinitions'
 
 function RenderMedia ({media}) {
@@ -45,16 +47,17 @@ const Library = (props) => {
 
         return (
             <React.Fragment>
-                <Jumbotron>
-                    <h1 className="display-5">NASA Image and Video Library</h1>
-                    <p className="lead">Search results for {props.query ? props.query : detaultQuery}</p>
-                    <hr className="my-2" />
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                    <p className="lead">
-                        <Button outline color="dark">Learn More</Button>
-                    </p>
-                </Jumbotron>
-                <div className="container">
+                <SearchHeader />
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-12">
+                            <SearchTabs />
+                        </div>
+                        <div className="col-12">
+                            <br />
+                            <p>Search results for: "{props.query ? props.query : detaultQuery}"</p>
+                        </div>
+                    </div>
                     <div className="row">
                         {library}
                     </div>

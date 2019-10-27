@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, 
-    NavItem, Button, Form, Input, FormGroup } from 'reactstrap';
+    NavItem, Button, Form, Input } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
-class Header extends Component {
+class SearchHeader extends Component {
 
     constructor(props) {
         super(props);
@@ -23,12 +23,12 @@ class Header extends Component {
         alert("Search: " + this.searchQuery.value);
         event.preventDefault();
     }
-    
+
     render() {
         return (
             <React.Fragment>
                 <Navbar dark expand="md">
-                    <div className="container">
+                    <div className="container-fluid">
                         <NavbarToggler onClick={this.toggleNav} />
                         <NavbarBrand href="/">
                             <img src="assets/images/logo.svg" alt="NASA" height="40"/>
@@ -60,4 +60,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default SearchHeader;

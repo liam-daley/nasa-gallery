@@ -13,7 +13,7 @@ export const MediaList = (state = {
             return {...state, isLoading: true, errMess: null, mediaList: []};
 
         case ActionTypes.MEDIA_FAILED:
-            return {...state, isLoading: false, errMess: action.payLoad};
+            return {...state, isLoading: false, errMess: action.payload};
 
         default:
             return state;

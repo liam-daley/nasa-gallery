@@ -1,6 +1,5 @@
 import React, { Component }  from 'react';
 import Home from './HomeComponent';
-import Header from './HeaderComponent';
 import Library from './LibraryComponent';
 import Feature from './FeatureComponent';
 import MediaDetail from './MediaDetailComponent'
@@ -56,7 +55,6 @@ class Main extends Component {
 
         return (
             <div>
-                <Header />
                 <Switch>
                     <Route path="/home" component={HomePage} />
                     <Route exact path="/library" component={() => <Library mediaList={this.props.mediaList} />} />
